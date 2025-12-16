@@ -18,11 +18,49 @@ public class ManualTest {
 
     public static void main(String[] args) throws CloneNotSupportedException {
         Locale.setDefault(Locale.US); // Suvienodiname skaičių formatus
-        executeTest();
+
+
+        FibonacciHeap<Integer> heap = new FibonacciHeap<>();
+
+        for(int i  = 10; i >= 2; i--){
+if(i==5)continue;
+            heap.insert(i);
+        }
+//        heap.insert(1);
+        heap.insert(0);
+
+//        heap.insert(3);
+        heap.insert(1);
+
+        FibonacciHeap.Node<Integer> insertedNode = heap.insert(5);
+        heap.extractMin();
+
+//        heap.decreaseKey(insertedNode,0);
+
+        System.out.println(heap.toVisualizedString());
+
+//        System.out.println("FindMin reikšmė: " + heap.findMin());
+
+
+//        heap.insert(1);
+//        heap.insert(2);
+//        heap.insert(3);
+//        heap.insert(4);
+//        heap.insert(5);
+//        heap.insert(6);
+//        heap.insert(7);
+//        heap.insert(8);
+//        heap.insert(9);
+//
+//        heap.insert(1);
+
+
+
+
 
 ////        ParsableSortedSet<Car> tree = new ParsableBstSet<>();
 //
-//        BstSet<Integer> tree = new BstSet<>();
+        BstSet<Integer> tree = new BstSet<>();
 //        tree.add(5);
 //        tree.add(10);
 //        tree.add(0);
